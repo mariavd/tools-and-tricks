@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{comment}
+\usepackage[version=4]{mhchem}
+\usepackage{xspace} % to get the spacing after macros right
+
+\usepackage[backend=bibtex8,%
+	    url=false,%
+	    eprint=false,%
+	    doi=false,%
+	    isbn=false,%
+	    date=year,%
+	    style=numeric-comp]{biblatex}
+
+\addbibresource{literature.bib}
+\addbibresource{Bibliography.bib}
+\DeclareFieldFormat[article]{title}{} % remove article titles
+
+
+\title{Title}
+
+\begin{document}
+
+\maketitle
+
+\section{Section}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=120pt]{gfx/fig}
+    \caption{Caption}
+    \label{fig:label}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Subfigures 
+
+\begin{figure}[H]%
+    \centering
+    \subfigure[Front view]{%
+	\label{fig:front}%
+	\includegraphics[height=2in]{gfx/front.jpg}}%
+	\qquad
+    \subfigure[Tilted view]{%
+	\label{fig:tilt}%
+	\includegraphics[height=2in]{gfx/tilt.jpg}}%
+	\qquad
+    \subfigure[Top view]{%
+	\label{fig:top}%
+	\includegraphics[height=2in]{gfx/top.jpg}}%
+	\qquad
+    \subfigure[Side view]{%
+	\label{fig:side}%
+	\includegraphics[height=2in]{gfx/side.jpg}}%
+    \caption{Caption.}
+    \label{fig:label}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{rrrrrr}
+	\hline
+	Domain &  0 & 10 & 20 & 30 & \\
+	\hline
+	($ 0 \leq z \leq 10 $) & 14.04 & 14.16 & 14.27 & 14.16 \\
+	\hline               
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:label}
+\end{table}
+
+\newpage
+
+\centerline{\Huge Supporting Information}
+
+\section{Coordinates}
+
+\subsection{Molecule}
+\verbatiminput{coord.xyz}
+
+\section{Notes}
+
+The script 
+
+\verbatiminput{script.sh}
+
+\section{Raw data}
+
+\subsection{File}
+\verbatiminput{data/file}
+
+\end{document}
