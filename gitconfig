@@ -1,0 +1,11 @@
+[core]
+	editor = vim
+[push]
+	default = matching
+[color]
+        ui = auto
+        branch = auto
+        status = auto
+[alias]
+        lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(yellow)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold red)%d%C(reset)' --all
+
