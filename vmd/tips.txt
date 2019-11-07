@@ -1,0 +1,3 @@
+Cutting a sphere around a selection:
+
+within 5 of { sqrt{(x-6) * (x-6) + (y-6) * (y-6) + (z-6) *( z-6) } < 5}
