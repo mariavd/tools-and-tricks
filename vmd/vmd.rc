@@ -402,3 +402,16 @@ proc rotate_bond { sel ind1 ind2 angle {molid top}} {
     # rotate selection
     $sel move $rot_mat
 } 
+
+#############################################################
+#       		USE: move2origin				#
+#############################################################
+
+proc move2origin { set molec [atomselect top all]
+    set benzene [atomselect top "index 0 to 5"]
+	orient_sel top $benzene
+	set geocentre [measure center $benzene]
+	$molec moveby [vecscale -1.0 $geocentre]
+	}
+
+
