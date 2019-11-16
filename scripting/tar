@@ -1,0 +1,4 @@
+tar --append --file=archive.tar newfile
+tar --list --file=archive.tar
+tar --directory
+

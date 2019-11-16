@@ -1,0 +1,2 @@
+# find all files excluding the *gz archives and delete them
+find . -type f -name '*' ! -name "*gz" -exec rm {} \;
